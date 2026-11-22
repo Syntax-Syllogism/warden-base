@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Apply_Runs</fullName>
+    <columns>NAME</columns>
+    <columns>wdn_Mode__c</columns>
+    <columns>wdn_Source_System__c</columns>
+    <columns>wdn_Planned_Count__c</columns>
+    <columns>wdn_Applied_Count__c</columns>
+    <columns>wdn_Error_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>wdn_Mode__c</field>
+        <operation>equals</operation>
+        <value>Apply</value>
+    </filters>
+    <label>Apply Runs</label>
+</ListView>

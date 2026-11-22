@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Source-control commit or content hash for the persona definition used by the run.</description>
+    <fullName>wdn_Definition_Sha__c</fullName>
+    <label>Definition SHA</label>
+    <length>64</length>
+    <type>Text</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Active_Personas</fullName>
+    <columns>NAME</columns>
+    <columns>wdn_Api_Name__c</columns>
+    <columns>wdn_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>wdn_Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Active Personas</label>
+</ListView>

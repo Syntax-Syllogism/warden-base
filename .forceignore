@@ -1,0 +1,9 @@
+# List files or directories below to ignore them when running
+# `sf project deploy/retrieve` and `sf project deploy preview`.
+# https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
+
+# Generated manifest — we author metadata as source, not package.xml.
+package.xml
+
+# Local CLI / editor state that can leak into a package directory.
+**/*.dup

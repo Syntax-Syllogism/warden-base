@@ -1,0 +1,19 @@
+engines:
+  eslint:
+    eslint_config_file: config/code-analyzer-eslint.config.mjs
+  cpd:
+    file_extensions:
+      # CPD's JavaScript lexer cannot read the shebangs in our .mjs scripts.
+      javascript: ['.js', '.cjs']
+  pmd:
+    custom_rulesets:
+      - config/code-analyzer-pmd.xml
+
+rules:
+  pmd:
+    # The stock rule assumes unprefixed names. The replacement enforces wdn_.
+    ClassNamingConventions:
+      disabled: true
+    WardenClassNamingConventions:
+      severity: Low
+      tags: [Recommended]

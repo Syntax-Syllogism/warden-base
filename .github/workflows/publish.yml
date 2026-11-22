@@ -1,0 +1,71 @@
+name: Package beta and release contract
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  create-beta:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run contract:check
+      - run: npm install --global @salesforce/cli
+
+      - name: Authenticate Dev Hub
+        env:
+          DEVHUB_SFDX_AUTH_URL: ${{ secrets.DEVHUB_SFDX_AUTH_URL }}
+        run: |
+          if [ -z "$DEVHUB_SFDX_AUTH_URL" ]; then
+            echo "::error::Set the DEVHUB_SFDX_AUTH_URL repository secret before creating a beta."
+            exit 1
+          fi
+          auth="$(mktemp)"
+          trap 'rm -f "$auth"' EXIT
+          printf '%s' "$DEVHUB_SFDX_AUTH_URL" > "$auth"
+          sf org login sfdx-url --sfdx-url-file "$auth" --alias devHub --json > /dev/null
+
+      - name: Create beta version
+        run: node scripts/release/create-beta.mjs --no-branch
+
+      - name: Upload release record
+        uses: actions/upload-artifact@v7
+        with:
+          name: beta-release-record
+          path: |
+            sfdx-project.json
+            contract.json
+            docs/evidence/releases/
+
+  attach-contract:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run contract:check
+      - name: Upload contract.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload --repo "$GITHUB_REPOSITORY" --clobber -- "$RELEASE_TAG" contract.json

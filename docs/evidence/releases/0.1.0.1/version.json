@@ -1,0 +1,15 @@
+{
+  "package": "warden-base",
+  "version": "0.1.0.1",
+  "subscriberPackageVersionId": "04tfj000000mpEjAAI",
+  "packageVersionId": "05ifj0000006LxpAAE",
+  "alias": "warden-base@0.1.0-1",
+  "commit": "bf9a9537bfbb5c7c70d48815c289b47cdc7d188a",
+  "tag": "bf9a9537bfbb5c7c70d48815c289b47cdc7d188a",
+  "createdAt": "2026-11-21T21:18:53.091Z",
+  "released": false,
+  "codeCoverage": 100,
+  "hasPassedCodeCoverageCheck": true,
+  "validationSkipped": false,
+  "installUrl": "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000mpEjAAI"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Warden Apex naming" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0">
+    <description>Apply the package's manual namespace to Apex class names.</description>
+    <rule ref="category/apex/codestyle.xml/ClassNamingConventions" name="WardenClassNamingConventions">
+        <!-- Top-level production and test classes use the package's wdn_ prefix. -->
+        <properties>
+            <property name="classPattern" value="wdn_[A-Z][A-Za-z0-9_]*" />
+            <property name="testClassPattern" value="wdn_[A-Z][A-Za-z0-9_]*" />
+        </properties>
+    </rule>
+</ruleset>

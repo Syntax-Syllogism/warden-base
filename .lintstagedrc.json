@@ -1,0 +1,5 @@
+{
+  "*.md": ["prettier --write", "markdownlint-cli2 --fix"],
+  "*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,json,jsonc,yml,yaml,css,scss,html}": "prettier --write --ignore-unknown",
+  "*.{cls,trigger}": "afmt -c .afmt.toml --write"
+}

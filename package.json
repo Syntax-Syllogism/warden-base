@@ -1,0 +1,30 @@
+{
+  "name": "warden-base",
+  "version": "0.1.0",
+  "scripts": {
+    "prepare": "husky",
+    "test": "npm run format:check && npm run lint:md && npm run test:metadata && npm run test:analyzer && npm run contract:check",
+    "format:check": "prettier --check .",
+    "format:apex": "afmt -c .afmt.toml --write .",
+    "format:apex:check": "afmt -c .afmt.toml --check .",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#.loop\"",
+    "test:apex": "aer test sfdx-source/base",
+    "analyze": "node scripts/analyze.mjs",
+    "test:analyzer": "node --test scripts/test/analyze.test.mjs",
+    "gate": "node scripts/gate.mjs",
+    "test:metadata": "node --test scripts/test/object-model.test.mjs scripts/release/test/create-beta.test.mjs",
+    "contract:generate": "node scripts/contract.mjs",
+    "contract:check": "node scripts/contract.mjs --check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "markdownlint-cli2": "^0.23.3",
+    "prettier": "^3.9.9",
+    "xml2js": "^0.6.2"
+  },
+  "private": true,
+  "description": "Ledger and persona schema for the warden CLI's Salesforce org writes (unlocked 2GP)"
+}

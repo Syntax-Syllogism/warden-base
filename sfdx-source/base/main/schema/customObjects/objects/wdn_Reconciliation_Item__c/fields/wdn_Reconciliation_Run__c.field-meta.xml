@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Parent reconciliation run that produced this item; deletion cascades to its items.</description>
+    <fullName>wdn_Reconciliation_Run__c</fullName>
+    <label>Reconciliation Run</label>
+    <relationshipLabel>Reconciliation Items</relationshipLabel>
+    <relationshipName>wdn_ReconciliationItems</relationshipName>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <referenceTo>wdn_Reconciliation_Run__c</referenceTo>
+    <type>MasterDetail</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Persona assigned to the user.</description>
+    <fullName>wdn_Persona__c</fullName>
+    <label>Persona</label>
+    <relationshipLabel>Persona Assignments</relationshipLabel>
+    <relationshipName>wdn_PersonaAssignments</relationshipName>
+    <referenceTo>wdn_Persona__c</referenceTo>
+    <required>true</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Reconciliation run that created this ledger entry.</description>
+    <fullName>wdn_Granted_By_Run__c</fullName>
+    <label>Granted By Run</label>
+    <relationshipLabel>Provisioned Grants</relationshipLabel>
+    <relationshipName>wdn_RunProvisionedGrants</relationshipName>
+    <referenceTo>wdn_Reconciliation_Run__c</referenceTo>
+    <required>false</required>
+    <type>Lookup</type>
+    <trackHistory>true</trackHistory>
+</CustomField>

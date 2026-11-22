@@ -1,0 +1,18 @@
+# afmt (https://github.com/xixiaofinland/afmt) formats all Apex: classes,
+# triggers and anonymous scripts. Prettier formats everything else.
+# afmt never loads this file implicitly; always pass `-c .afmt.toml`.
+max_width = 80
+indent_size = 2
+# Always brace if/else/for/while bodies, as PMD's MustUseBraces rules require.
+wrap_single_statements = true
+
+[files]
+include = ["**/*.cls", "**/*.trigger", "**/*.apex", "**/*.apexc"]
+exclude = [
+  "**/.git/**",
+  "**/.sfdx/**",
+  "**/.sf/**",
+  "**/.temp/**",
+  "**/.loop/**",
+  "**/node_modules/**",
+]

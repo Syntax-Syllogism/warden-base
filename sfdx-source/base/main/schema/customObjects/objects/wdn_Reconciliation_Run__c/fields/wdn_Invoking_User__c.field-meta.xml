@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>External username or actor identity supplied by the initiating integration.</description>
+    <fullName>wdn_Invoking_User__c</fullName>
+    <label>Invoking User</label>
+    <length>255</length>
+    <type>Text</type>
+</CustomField>

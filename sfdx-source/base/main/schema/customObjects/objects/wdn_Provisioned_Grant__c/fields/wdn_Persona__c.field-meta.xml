@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Persona__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Persona that requested this grant. Set by the CLI and by the extension engine.</description>
+    <label>Persona</label>
+    <referenceTo>wdn_Persona__c</referenceTo>
+    <relationshipLabel>Provisioned Grants</relationshipLabel>
+    <relationshipName>Provisioned_Grants</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,3 @@
+# Keep LF in the working tree on every platform. afmt --check, Prettier and the
+# SLDS linter all fail on CRLF files that core.autocrlf=true creates on Windows.
+* text=auto eol=lf

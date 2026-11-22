@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Parent persona that owns this component; deletion cascades to its components.</description>
+    <fullName>wdn_Persona__c</fullName>
+    <label>Persona</label>
+    <relationshipLabel>Persona Components</relationshipLabel>
+    <relationshipName>wdn_PersonaComponents</relationshipName>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <referenceTo>wdn_Persona__c</referenceTo>
+    <type>MasterDetail</type>
+</CustomField>

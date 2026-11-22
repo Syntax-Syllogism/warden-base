@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>User receiving this persona assignment; this lookup exposes the assignment on the standard User page.</description>
+    <fullName>wdn_User__c</fullName>
+    <label>User</label>
+    <relationshipLabel>Persona Assignments</relationshipLabel>
+    <relationshipName>wdn_PersonaAssignments</relationshipName>
+    <referenceTo>User</referenceTo>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Persona assignment that explains why this grant was provisioned.</description>
+    <fullName>wdn_Persona_Assignment__c</fullName>
+    <label>Persona Assignment</label>
+    <relationshipLabel>Provisioned Grants</relationshipLabel>
+    <relationshipName>wdn_AssignmentProvisionedGrants</relationshipName>
+    <referenceTo>wdn_Persona_Assignment__c</referenceTo>
+    <required>false</required>
+    <type>Lookup</type>
+    <trackHistory>true</trackHistory>
+</CustomField>

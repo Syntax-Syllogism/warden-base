@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Reconciliation_Run_Compact</fullName>
+    <fields>NAME</fields>
+    <fields>wdn_Mode__c</fields>
+    <fields>wdn_Source_System__c</fields>
+    <fields>wdn_Planned_Count__c</fields>
+    <fields>wdn_Error_Count__c</fields>
+    <label>Reconciliation Run Compact</label>
+</CompactLayout>

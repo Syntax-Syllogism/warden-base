@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Provisioned_Grant_Compact</fullName>
+    <fields>NAME</fields>
+    <fields>wdn_User__c</fields>
+    <fields>wdn_Type__c</fields>
+    <fields>wdn_Target_Label__c</fields>
+    <fields>wdn_Granted_On__c</fields>
+    <label>Provisioned Grant Compact</label>
+</CompactLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Human-readable label retained for reporting when the setup target is renamed.</description>
+    <fullName>wdn_Target_Label__c</fullName>
+    <label>Target Label</label>
+    <length>255</length>
+    <type>Text</type>
+    <trackHistory>true</trackHistory>
+</CustomField>

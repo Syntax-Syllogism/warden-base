@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Unmanaged_Items</fullName>
+    <columns>NAME</columns>
+    <columns>wdn_User_Key__c</columns>
+    <columns>wdn_Category__c</columns>
+    <columns>wdn_Action__c</columns>
+    <columns>wdn_Status__c</columns>
+    <columns>wdn_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>wdn_Status__c</field>
+        <operation>equals</operation>
+        <value>Unmanaged</value>
+    </filters>
+    <label>Unmanaged Items</label>
+</ListView>

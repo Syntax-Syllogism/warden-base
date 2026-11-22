@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>DeveloperName or API name of the setup-object target; text is required because setup objects cannot be custom-object lookups.</description>
+    <fullName>wdn_Reference__c</fullName>
+    <label>Reference</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+</CustomField>

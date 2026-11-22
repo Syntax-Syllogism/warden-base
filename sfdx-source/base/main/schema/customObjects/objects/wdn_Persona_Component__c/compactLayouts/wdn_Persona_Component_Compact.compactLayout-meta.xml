@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Persona_Component_Compact</fullName>
+    <fields>NAME</fields>
+    <fields>wdn_Persona__c</fields>
+    <fields>wdn_Type__c</fields>
+    <fields>wdn_Reference__c</fields>
+    <label>Persona Component Compact</label>
+</CompactLayout>

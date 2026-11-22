@@ -1,0 +1,22 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "sfdx-source/base",
+      "default": true,
+      "package": "warden-base",
+      "versionDescription": "Ledger and persona schema for the warden CLI's Salesforce org writes",
+      "definitionFile": "config/project-scratch-def.json"
+    }
+  ],
+  "name": "warden-base",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "67.0",
+  "packageAliases": {
+    "warden-base": "0Hofj0000005mLlCAI",
+    "warden-base@0.1.0-1": "04tfj000000mpEjAAI",
+    "warden-base@0.1.0-2": "04tfj000000mt2DAAQ"
+  }
+}

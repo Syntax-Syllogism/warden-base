@@ -1,0 +1,27 @@
+# Generated or vendored output
+node_modules/
+lib/
+dist/
+build/
+coverage/
+docs-site/dist/
+docs-site/.astro/
+.history/
+.loop/
+.loop-ca.json
+code-analyzer-results.json
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated from Salesforce metadata by scripts/contract.mjs
+contract.json
+
+# Apex is formatted by afmt
+**/*.cls
+**/*.trigger
+
+# Release prompt template, which keeps its exact layout
+bin/changelog-prompt.txt
