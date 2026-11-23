@@ -18,11 +18,18 @@ permission to the System Administrator profile. System Administrators are
 trusted to bypass the ledger guard. The guard protects ledger records from
 non-admin operators and integrations that lack Ledger Maintenance.
 
-The guard blocks grant deletion and ordinary grant edits. A caller can set the
-revocation date and revoking run together once, without changing any other
-grant fields. Run and item updates are allowed so callers can fill in the audit
-outcome. Run and item deletion requires Ledger Maintenance. The custom
-permission bypasses the guard, while Salesforce lookup restrictions still apply.
+An `AllUsers` install grants `wdn_Ledger_Maintenance` to every profile. Every
+user can then bypass the ledger guard if they have access to the operation.
+Use `AdminsOnly` and assign Warden Base permission sets by job. See the
+[install security evidence catalog](evidence/README.md#0102).
+
+The guard blocks grant deletion and protects every stored Grant field, including
+standard fields such as the owner, except the revocation date and revoking run.
+Formula and auto-number fields are not compared.
+A caller can set those two fields together once. Run and item updates are
+allowed so callers can fill in the audit outcome. Run and item deletion requires
+Ledger Maintenance. The custom permission bypasses the guard, while Salesforce
+lookup restrictions still apply.
 
 These sets control access to Warden records. The acting Salesforce user also
 needs the Salesforce permissions for any grants the CLI will manage, such as

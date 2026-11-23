@@ -19,24 +19,49 @@
                 <field>wdn_User_Key__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_User_Id__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Category__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Action__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Status__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Detail__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Error__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>false</editHeading>
+        <label>System Information</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

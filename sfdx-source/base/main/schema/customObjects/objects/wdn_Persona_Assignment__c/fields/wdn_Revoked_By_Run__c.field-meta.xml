@@ -5,7 +5,7 @@
     <label>Revoked By Run</label>
     <deleteConstraint>Restrict</deleteConstraint>
     <referenceTo>wdn_Reconciliation_Run__c</referenceTo>
-    <relationshipLabel>Revoked By Run</relationshipLabel>
+    <relationshipLabel>Assignments Revoked</relationshipLabel>
     <relationshipName>wdn_RevokedAssignments</relationshipName>
     <required>false</required>
     <type>Lookup</type>

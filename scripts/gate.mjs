@@ -12,4 +12,4 @@ if (!existsSync('node_modules')) run('npm ci --no-audit --no-fund');
 run('npm test');
 run('npm run format:apex:check');
 run('npm run analyze -- --if-installed');
-run('npm run test:apex');
+if (!process.argv.includes('--skip-apex')) run('npm run test:apex');

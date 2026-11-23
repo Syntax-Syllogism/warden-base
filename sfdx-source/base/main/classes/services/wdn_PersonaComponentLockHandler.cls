@@ -11,7 +11,11 @@ public without sharing class wdn_PersonaComponentLockHandler {
     for (wdn_Persona_Component__c component : components) {
       parents.add(component.wdn_Persona__c);
     }
-    // Every component write must lock its parent regardless of caller access.
+    if (parents.isEmpty()) {
+      return;
+    }
+    // System mode and without sharing let the batch lock every parent.
+    // SOQL forbids ORDER BY on locking queries.
     Database.query(
       'SELECT Id FROM wdn_Persona__c WHERE Id IN :parents FOR UPDATE',
       AccessLevel.SYSTEM_MODE

@@ -1,7 +1,8 @@
 # The Warden Base contract
 
 [contract.json](../contract.json) describes the six objects' field types,
-picklist values, lookup targets and child relationships. It also lists the
+picklist values, lookup targets and child relationships. It marks required
+custom fields and master-detail relationships with `required: true`. It also lists the
 object-level CRUD grants of the four permission sets. The version comes from
 `versionNumber` in `sfdx-project.json`, without the fourth build segment.
 

@@ -5,6 +5,6 @@
     <fields>wdn_User__c</fields>
     <fields>wdn_Type__c</fields>
     <fields>wdn_Target_Label__c</fields>
-    <fields>wdn_Granted_On__c</fields>
+    <fields>wdn_Revoked_On__c</fields>
     <label>Provisioned Grant Compact</label>
 </CompactLayout>

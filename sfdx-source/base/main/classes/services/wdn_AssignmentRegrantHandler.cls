@@ -2,6 +2,13 @@
  * Maintains revocation audit fields on active assignments.
  */
 public inherited sharing class wdn_AssignmentRegrantHandler {
+  private static final String ACTIVE = 'Active';
+  private static final List<Schema.SObjectField> ASSIGNMENT_REVOCATION_FIELDS =
+    new List<Schema.SObjectField>{
+      wdn_Persona_Assignment__c.wdn_Revoked_On__c,
+      wdn_Persona_Assignment__c.wdn_Revoked_By__c,
+      wdn_Persona_Assignment__c.wdn_Revoked_By_Run__c
+    };
   /**
    * Clears stale revocation data when an assignment enters the Active state.
    * @param rows Incoming assignments
@@ -15,15 +22,15 @@ public inherited sharing class wdn_AssignmentRegrantHandler {
   ) {
     for (wdn_Persona_Assignment__c row : rows) {
       if (
-        row.wdn_Status__c == 'Active'
+        row.wdn_Status__c == ACTIVE
         && (
           operation == System.TriggerOperation.BEFORE_INSERT
-          || oldRows.get(row.Id).wdn_Status__c != 'Active'
+          || oldRows?.get(row.Id)?.wdn_Status__c != ACTIVE
         )
       ) {
-        row.wdn_Revoked_On__c = null;
-        row.wdn_Revoked_By__c = null;
-        row.wdn_Revoked_By_Run__c = null;
+        for (Schema.SObjectField field : ASSIGNMENT_REVOCATION_FIELDS) {
+          row.put(field, null);
+        }
       }
     }
   }

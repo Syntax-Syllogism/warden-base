@@ -1,6 +1,6 @@
 {
   "package": "warden-base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "objects": {
     "wdn_Persona_Assignment__c": {
       "fields": {
@@ -9,6 +9,7 @@
         },
         "wdn_Persona__c": {
           "type": "Lookup",
+          "required": true,
           "referenceTo": "wdn_Persona__c",
           "relationshipName": "wdn_PersonaAssignments"
         },
@@ -50,14 +51,17 @@
         },
         "wdn_Persona__c": {
           "type": "MasterDetail",
+          "required": true,
           "referenceTo": "wdn_Persona__c",
           "relationshipName": "wdn_PersonaComponents"
         },
         "wdn_Reference__c": {
-          "type": "Text"
+          "type": "Text",
+          "required": true
         },
         "wdn_Type__c": {
           "type": "Picklist",
+          "required": true,
           "values": [
             "Permission Set",
             "Permission Set Group",
@@ -78,7 +82,8 @@
           "type": "Checkbox"
         },
         "wdn_Api_Name__c": {
-          "type": "Text"
+          "type": "Text",
+          "required": true
         }
       },
       "childRelationships": {
@@ -119,13 +124,15 @@
           "type": "DateTime"
         },
         "wdn_Target_Id__c": {
-          "type": "Text"
+          "type": "Text",
+          "required": true
         },
         "wdn_Target_Label__c": {
           "type": "Text"
         },
         "wdn_Type__c": {
           "type": "Picklist",
+          "required": true,
           "values": [
             "Permission Set",
             "Permission Set Group",
@@ -161,6 +168,7 @@
         },
         "wdn_Reconciliation_Run__c": {
           "type": "MasterDetail",
+          "required": true,
           "referenceTo": "wdn_Reconciliation_Run__c",
           "relationshipName": "wdn_ReconciliationItems"
         },
@@ -179,7 +187,8 @@
           "type": "Text"
         },
         "wdn_User_Key__c": {
-          "type": "Text"
+          "type": "Text",
+          "required": true
         }
       },
       "childRelationships": {}

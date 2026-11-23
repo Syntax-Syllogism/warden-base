@@ -1,26 +1,9 @@
 @IsTest
 private class wdn_BasePermissionSetsTest {
   private static User operator(String alias, String permission) {
-    Profile standard = [
-      SELECT Id
-      FROM Profile
-      WHERE Name = 'Standard User' AND UserType = 'Standard'
-      LIMIT 1
-    ];
-    User user =
-      new User(
-        Alias = alias,
-        LastName = alias,
-        Email = alias + '@example.test',
-        Username = alias + '.' + System.now().getTime() + '@example.test',
-        ProfileId = standard.Id,
-        TimeZoneSidKey = 'America/New_York',
-        LocaleSidKey = 'en_US',
-        EmailEncodingKey = 'UTF-8',
-        LanguageLocaleKey = 'en_US'
-      );
-    insert user;
-    insert new PermissionSetAssignment(
+    User user = wdn_TriggerTestUsers.minimalAccessUser(alias);
+    insert as system user;
+    insert as system new PermissionSetAssignment(
       AssigneeId = user.Id,
       PermissionSetId =
         [SELECT Id FROM PermissionSet WHERE Name = :permission].Id
@@ -34,14 +17,14 @@ private class wdn_BasePermissionSetsTest {
     System.runAs(user) {
       wdn_Persona__c persona =
         new wdn_Persona__c(Name = 'Operator', wdn_Api_Name__c = 'operator');
-      insert persona;
+      insert as system persona;
       wdn_Persona_Assignment__c assignment =
         new wdn_Persona_Assignment__c(
           wdn_User__c = user.Id,
           wdn_Persona__c = persona.Id,
           wdn_Status__c = 'Active'
         );
-      insert assignment;
+      insert as system assignment;
 
       wdn_Reconciliation_Run__c run =
         new wdn_Reconciliation_Run__c(
@@ -100,12 +83,21 @@ private class wdn_BasePermissionSetsTest {
         ),
         AccessLevel.USER_MODE
       );
+      savedGrant = [
+        SELECT wdn_Revoked_On__c, wdn_Revoked_By_Run__c
+        FROM wdn_Provisioned_Grant__c
+        WHERE Id = :grant.Id
+        WITH USER_MODE
+      ];
+      System.assertEquals(revoked, savedGrant.wdn_Revoked_On__c);
+      System.assertEquals(run.Id, savedGrant.wdn_Revoked_By_Run__c);
       System.assertEquals(
         'Revoked',
         [
           SELECT wdn_Status__c
           FROM wdn_Persona_Assignment__c
           WHERE Id = :assignment.Id
+          WITH USER_MODE
         ]
           .wdn_Status__c
       );
@@ -113,7 +105,86 @@ private class wdn_BasePermissionSetsTest {
   }
 
   @IsTest
-  static void publisherUpsertsPersonasAndReplacesComponents() {
+  static void publisherCannotCreateGrants() {
+    User user = operator('wdbpub', 'wdn_Persona_Publisher');
+    System.runAs(user) {
+      Schema.SObjectType grantType =
+        Schema.getGlobalDescribe().get('wdn_Provisioned_Grant__c');
+      System.assert(
+        grantType == null || !grantType.getDescribe().isCreateable()
+      );
+      if (grantType != null) {
+        SObject grant = grantType.newSObject();
+        grant.put('wdn_User__c', user.Id);
+        grant.put('wdn_Type__c', 'Permission Set');
+        grant.put('wdn_Target_Id__c', 'publisher-probe');
+        Database.SaveResult result =
+          Database.insert(grant, false, AccessLevel.USER_MODE);
+        System.assertEquals(false, result.isSuccess());
+      }
+    }
+  }
+
+  @IsTest
+  static void viewerReadsButCannotWrite() {
+    User user = operator('wdbview', 'wdn_Base_Viewer');
+    System.runAs(user) {
+      wdn_Persona__c persona =
+        new wdn_Persona__c(Name = 'Viewer', wdn_Api_Name__c = 'viewer');
+      insert as system persona;
+      System.assertEquals(
+        1,
+        [
+          SELECT COUNT()
+          FROM wdn_Persona__c
+          WHERE Id = :persona.Id
+          WITH USER_MODE
+        ]
+      );
+      System.assertEquals(
+        0,
+        [SELECT COUNT() FROM wdn_Persona_Component__c WITH USER_MODE]
+      );
+      System.assertEquals(
+        0,
+        [SELECT COUNT() FROM wdn_Persona_Assignment__c WITH USER_MODE]
+      );
+      System.assertEquals(
+        0,
+        [SELECT COUNT() FROM wdn_Provisioned_Grant__c WITH USER_MODE]
+      );
+      System.assertEquals(
+        0,
+        [SELECT COUNT() FROM wdn_Reconciliation_Run__c WITH USER_MODE]
+      );
+      System.assertEquals(
+        0,
+        [SELECT COUNT() FROM wdn_Reconciliation_Item__c WITH USER_MODE]
+      );
+      Database.SaveResult inserted =
+        Database.insert(
+          new wdn_Persona__c(Name = 'Denied', wdn_Api_Name__c = 'denied'),
+          false,
+          AccessLevel.USER_MODE
+        );
+      System.assertEquals(false, inserted.isSuccess());
+      Database.SaveResult updated =
+        Database.update(
+          new wdn_Persona__c(Id = persona.Id, Name = 'Denied'),
+          false,
+          AccessLevel.USER_MODE
+        );
+      System.assertEquals(false, updated.isSuccess());
+      System.assertEquals(
+        'Viewer',
+        [SELECT Name FROM wdn_Persona__c WHERE Id = :persona.Id WITH USER_MODE]
+          .Name
+      );
+    }
+  }
+
+  @IsTest
+  static void publisherUpsertsPersonasAndCreatesAndDeletesComponents() {
     User user = operator('wdbpub', 'wdn_Persona_Publisher');
     System.runAs(user) {
       wdn_Persona__c persona =

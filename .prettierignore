@@ -1,6 +1,7 @@
 # Generated or vendored output
 node_modules/
 lib/
+!/scripts/org/lib/
 dist/
 build/
 coverage/

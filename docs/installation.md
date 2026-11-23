@@ -19,6 +19,7 @@ Use a Developer scratch org or a sandbox for a beta.
 
    This installation grants the System Administrator profile the
    [Ledger Maintenance custom permission](security.md#administrators-and-the-ledger-guard).
+   Avoid `AllUsers`, which gives every profile the ledger guard bypass.
 
 3. Assign the [permission sets](security.md) required for each user. Assign
    **Warden Base Viewer** to users who need the Warden Base Lightning app.

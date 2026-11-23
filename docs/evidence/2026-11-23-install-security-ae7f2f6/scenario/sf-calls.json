@@ -1,0 +1,829 @@
+[
+  {
+    "command": ["org", "create", "scratch"],
+    "status": 0,
+    "result": {
+      "username": "[REDACTED]",
+      "scratchOrgInfo": {
+        "attributes": {
+          "type": "ScratchOrgInfo",
+          "url": "/services/data/v68.0/sobjects/ScratchOrgInfo/2SRfj000005QbYvGAK"
+        },
+        "Id": "2SRfj000005QbYvGAK",
+        "OwnerId": "00561000000K5URAA0",
+        "IsDeleted": false,
+        "Name": "00000245",
+        "CreatedDate": "2026-11-23T07:54:45.000+0000",
+        "CreatedById": "00561000000K5URAA0",
+        "LastModifiedDate": "2026-11-23T07:54:53.000+0000",
+        "LastModifiedById": "00561000000zL78AAE",
+        "SystemModstamp": "2026-11-23T07:54:53.000+0000",
+        "LastViewedDate": "2026-11-23T07:54:45.000+0000",
+        "LastReferencedDate": "2026-11-23T07:54:45.000+0000",
+        "Edition": "Developer",
+        "Username": "[REDACTED]",
+        "AdminEmail": null,
+        "OrgName": "warden-base scratch",
+        "DurationDays": 1,
+        "ConnectedAppConsumerKey": "PlatformCLI",
+        "ConnectedAppCallbackUrl": "http://localhost:1717/OauthRedirect",
+        "Namespace": null,
+        "Features": "API",
+        "Snapshot": null,
+        "Country": null,
+        "Language": null,
+        "Package2AncestorIds": null,
+        "SourceOrg": null,
+        "HasSampleData": false,
+        "Release": "Current",
+        "SignupUsername": "[REDACTED]",
+        "Status": "Active",
+        "ErrorCode": null,
+        "ScratchOrg": "00DjZ000003Un9d",
+        "SignupInstance": "USA1342S",
+        "SignupCountry": "US",
+        "SignupLanguage": "en_US",
+        "SignupEmail": "[REDACTED]",
+        "SignupTrialDays": 1,
+        "LoginUrl": "https://inspiration-site-5647-dev-ed.scratch.my.salesforce.com",
+        "Description": null,
+        "ExpirationDate": "2026-11-24",
+        "LastLoginDate": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      },
+      "authFields": {
+        "accessToken": "[REDACTED]",
+        "instanceUrl": "https://inspiration-site-5647-dev-ed.scratch.my.salesforce.com",
+        "orgId": "00DjZ000003Un9dUAC",
+        "username": "[REDACTED]",
+        "loginUrl": "https://inspiration-site-5647-dev-ed.scratch.my.salesforce.com",
+        "clientId": "PlatformCLI",
+        "isDevHub": false,
+        "instanceApiVersion": "68.0",
+        "instanceApiVersionLastRetrieved": "11/23/2026, 9:54:55 AM",
+        "name": "warden-base scratch",
+        "instanceName": "USA1342S",
+        "namespacePrefix": null,
+        "isSandbox": false,
+        "isScratch": true,
+        "trailExpirationDate": "2026-11-25T07:54:52.000+0000",
+        "orgEdition": "Developer Edition",
+        "devHubUsername": "[REDACTED]",
+        "created": "1795420485000",
+        "expirationDate": "2026-11-24",
+        "createdOrgInstance": "USA1342S",
+        "tracksSource": true
+      },
+      "warnings": [],
+      "orgId": "00DjZ000003Un9dUAC"
+    },
+    "warnings": [
+      "Record types defined in the scratch org definition file will stop being capitalized by default in a future release.\nSet the `org-capitalize-record-types` config var to `true` to enforce capitalization."
+    ]
+  },
+  {
+    "command": ["org", "display", "--target-org"],
+    "status": 0,
+    "result": {
+      "id": "00DjZ000003Un9dUAC",
+      "devHubId": "[REDACTED]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://inspiration-site-5647-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-11-24",
+      "createdBy": "[REDACTED]",
+      "edition": "Developer",
+      "orgName": "warden-base scratch",
+      "createdDate": "2026-11-23T07:54:45.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "warden-evidence-1795420475202"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Organization",
+            "url": "/services/data/v68.0/sobjects/Organization/00DjZ000003Un9dUAC"
+          },
+          "Id": "00DjZ000003Un9dUAC",
+          "OrganizationType": "Developer Edition"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "install", "--package"],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfjZ000000R1XtSAK"
+      },
+      "Id": "0HfjZ000000R1XtSAK",
+      "IsDeleted": false,
+      "CreatedDate": "2026-11-23T07:55:39.000+0000",
+      "CreatedById": "005jZ000003KiETQA0",
+      "LastModifiedDate": "2026-11-23T07:55:39.000+0000",
+      "LastModifiedById": "005jZ000003KiETQA0",
+      "SystemModstamp": "2026-11-23T07:55:39.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000n3O9AAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "SUCCESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "installed", "list"],
+    "status": 0,
+    "result": [
+      {
+        "Id": "0A3jZ000000PlyESAS",
+        "SubscriberPackageId": "033fj000000tu81AAA",
+        "SubscriberPackageName": "warden-base",
+        "SubscriberPackageNamespace": null,
+        "SubscriberPackageVersionId": "04tfj000000n3O9AAI",
+        "SubscriberPackageVersionName": "ver 0.1.1",
+        "SubscriberPackageVersionNumber": "0.1.1.3",
+        "VersionSettings": ""
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+          },
+          "Name": "Analytics Cloud Integration User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm5QAC"
+          },
+          "Name": "Analytics Cloud Security User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmDQAS"
+          },
+          "Name": "Authenticated Website"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm8QAC"
+          },
+          "Name": "Authenticated Website"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UhbdQAC"
+          },
+          "Name": "B2B Reordering Portal Buyer Profile"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmVQAS"
+          },
+          "Name": "Chatter External User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm6QAC"
+          },
+          "Name": "Chatter Free User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmUQAS"
+          },
+          "Name": "Chatter Moderator User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm9QAC"
+          },
+          "Name": "Company Communities User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmZQAS"
+          },
+          "Name": "Contract Manager"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmbQAC"
+          },
+          "Name": "CPQ Integration User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmCQAS"
+          },
+          "Name": "Cross Org Data Proxy User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmBQAS"
+          },
+          "Name": "Customer Community Login User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmNQAS"
+          },
+          "Name": "Customer Community Plus Login User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmHQAS"
+          },
+          "Name": "Customer Community Plus User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmSQAS"
+          },
+          "Name": "Customer Community User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmFQAS"
+          },
+          "Name": "Customer Portal Manager Custom"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmLQAS"
+          },
+          "Name": "Customer Portal Manager Standard"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmdQAC"
+          },
+          "Name": "External Apps Login User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmPQAS"
+          },
+          "Name": "External Identity User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmMQAS"
+          },
+          "Name": "Force.com - App Subscription User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmTQAS"
+          },
+          "Name": "Force.com - Free User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmKQAS"
+          },
+          "Name": "Gold Partner User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmJQAS"
+          },
+          "Name": "High Volume Customer Portal"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmWQAS"
+          },
+          "Name": "High Volume Customer Portal User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmGQAS"
+          },
+          "Name": "Identity User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmYQAS"
+          },
+          "Name": "Marketing User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Uha2QAC"
+          },
+          "Name": "Minimum Access - API Only Integrations"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmcQAC"
+          },
+          "Name": "Minimum Access - Salesforce"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmOQAS"
+          },
+          "Name": "Partner App Subscription User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmRQAS"
+          },
+          "Name": "Partner Community Login User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmQQAS"
+          },
+          "Name": "Partner Community User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmIQAS"
+          },
+          "Name": "Silver Partner User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmXQAS"
+          },
+          "Name": "Solution Manager"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmAQAS"
+          },
+          "Name": "Standard Platform User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmaQAC"
+          },
+          "Name": "Standard User"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+          },
+          "Name": "System Administrator"
+        },
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001UgmEQAS"
+          },
+          "Name": "Work.com Only User"
+        }
+      ],
+      "totalSize": 38,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "SetupEntityAccess",
+            "url": "/services/data/v68.0/sobjects/SetupEntityAccess/0J0jZ00001jHyNiSAK"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dz7vWAA"
+            },
+            "Profile": null,
+            "Name": "wdn_Ledger_Maintenance",
+            "IsOwnedByProfile": false
+          }
+        },
+        {
+          "attributes": {
+            "type": "SetupEntityAccess",
+            "url": "/services/data/v68.0/sobjects/SetupEntityAccess/0J0jZ00001jHyNjSAK"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            },
+            "Name": "X00ex00000018ozh_128_09_04_12_1",
+            "IsOwnedByProfile": true
+          }
+        }
+      ],
+      "totalSize": 2,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTs5QAG"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Persona_Assignment__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTs6QAG"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Persona_Component__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTs7QAG"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Persona__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTs8QAG"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Provisioned_Grant__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTs9QAG"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Reconciliation_Item__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/110jZ00000xGTsAQAW"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTriWAE"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm2QAC"
+              },
+              "Name": "Analytics Cloud Integration User"
+            }
+          },
+          "SobjectType": "wdn_Reconciliation_Run__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": false,
+          "PermissionsEdit": false,
+          "PermissionsDelete": false,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": false
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa00AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Persona_Assignment__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa01AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Persona_Component__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa02AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Persona__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa03AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Provisioned_Grant__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa04AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Reconciliation_Item__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        },
+        {
+          "attributes": {
+            "type": "ObjectPermissions",
+            "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001dTrIa05AQC"
+          },
+          "Parent": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSjZ000001dTrIWAU"
+            },
+            "Profile": {
+              "attributes": {
+                "type": "Profile",
+                "url": "/services/data/v68.0/sobjects/Profile/00ejZ000001Ugm1QAC"
+              },
+              "Name": "System Administrator"
+            }
+          },
+          "SobjectType": "wdn_Reconciliation_Run__c",
+          "PermissionsRead": true,
+          "PermissionsCreate": true,
+          "PermissionsEdit": true,
+          "PermissionsDelete": true,
+          "PermissionsViewAllRecords": true,
+          "PermissionsModifyAllRecords": true
+        }
+      ],
+      "totalSize": 12,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "delete", "scratch"],
+    "status": 0,
+    "result": {
+      "username": "[REDACTED]",
+      "orgId": "00DjZ000003Un9dUAC"
+    },
+    "warnings": []
+  }
+]

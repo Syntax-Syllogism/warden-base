@@ -2,6 +2,12 @@
  * Immutable ledger history, with a one-time revocation audit transition.
  */
 public with sharing class wdn_OperationalRecordGuard {
+  @TestVisible
+  private static final String MAINTENANCE_PERMISSION = 'wdn_Ledger_Maintenance';
+  @TestVisible
+  private static final Set<String> REVOCATION_FIELDS =
+    new Set<String>{ 'wdn_revoked_on__c', 'wdn_revoked_by_run__c' };
+  private static Set<String> protectedGrantFields;
   /**
    * Error added to records when the operation requires maintenance access.
    */
@@ -13,7 +19,7 @@ public with sharing class wdn_OperationalRecordGuard {
    * @param records Records that require maintenance access
    */
   public static void blockUnlessMaintainer(List<SObject> records) {
-    if (FeatureManagement.checkPermission('wdn_Ledger_Maintenance')) {
+    if (FeatureManagement.checkPermission(MAINTENANCE_PERMISSION)) {
       return;
     }
     for (SObject record : records) {
@@ -32,13 +38,20 @@ public with sharing class wdn_OperationalRecordGuard {
     Map<Id, wdn_Provisioned_Grant__c> oldRows,
     System.TriggerOperation operation
   ) {
-    if (FeatureManagement.checkPermission('wdn_Ledger_Maintenance')) {
+    // This handler only enforces changes to existing grants.
+    if (
+      operation != System.TriggerOperation.BEFORE_UPDATE
+      && operation != System.TriggerOperation.BEFORE_DELETE
+    ) {
+      return;
+    }
+    if (FeatureManagement.checkPermission(MAINTENANCE_PERMISSION)) {
       return;
     }
     for (wdn_Provisioned_Grant__c row : rows) {
       if (
         operation == System.TriggerOperation.BEFORE_DELETE
-        || !revocationOnly(row, oldRows.get(row.Id))
+        || !revocationOnly(row, oldRows?.get(row.Id))
       ) {
         row.addError(MESSAGE);
       }
@@ -49,16 +62,11 @@ public with sharing class wdn_OperationalRecordGuard {
     wdn_Provisioned_Grant__c row,
     wdn_Provisioned_Grant__c oldRow
   ) {
-    if (!setsRevocationForFirstTime(row, oldRow)) {
+    if (oldRow == null || !setsRevocationForFirstTime(row, oldRow)) {
       return false;
     }
-    Map<String, Schema.SObjectField> fields =
-      Schema.SObjectType.wdn_Provisioned_Grant__c.fields.getMap();
-    for (String name : fields.keySet()) {
-      if (
-        isProtectedField(name, fields.get(name))
-        && row.get(name) != oldRow.get(name)
-      ) {
+    for (String name : getProtectedGrantFields()) {
+      if (row.get(name) != oldRow.get(name)) {
         return false;
       }
     }
@@ -75,20 +83,29 @@ public with sharing class wdn_OperationalRecordGuard {
       && row.wdn_Revoked_By_Run__c != null;
   }
 
-  private static Boolean isProtectedField(
-    String name,
-    Schema.SObjectField field
-  ) {
-    if (
-      name.equalsIgnoreCase('wdn_Revoked_On__c')
-      || name.equalsIgnoreCase('wdn_Revoked_By_Run__c')
-    ) {
-      return false;
+  @TestVisible
+  private static Set<String> getProtectedGrantFields() {
+    if (protectedGrantFields == null) {
+      protectedGrantFields = new Set<String>();
+      // Describe updateability reflects the caller's FLS. System-mode writes
+      // can change fields outside that FLS, so compare all stored fields.
+      for (Schema.SObjectField field : wdn_Provisioned_Grant__c.SObjectType.getDescribe(
+          SObjectDescribeOptions.DEFERRED
+        )
+        .fields
+        .getMap()
+        .values()) {
+        Schema.DescribeFieldResult details = field.getDescribe();
+        String name = details.getName().toLowerCase();
+        if (
+          !REVOCATION_FIELDS.contains(name)
+          && !details.isCalculated()
+          && !details.isAutoNumber()
+        ) {
+          protectedGrantFields.add(name);
+        }
+      }
     }
-    return name.equalsIgnoreCase('OwnerId')
-      || name.equalsIgnoreCase('Name')
-      || (
-        name.endsWithIgnoreCase('__c') && !field.getDescribe().isCalculated()
-      );
+    return protectedGrantFields;
   }
 }

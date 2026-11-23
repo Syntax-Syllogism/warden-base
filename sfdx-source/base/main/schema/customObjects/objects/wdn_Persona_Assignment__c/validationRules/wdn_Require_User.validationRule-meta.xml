@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wdn_Require_User</fullName>
+    <active>true</active>
+    <description>Every persona assignment needs a user. Packaging can't make a lookup to User required in metadata, so this rule enforces it on every API path.</description>
+    <errorConditionFormula>ISBLANK(wdn_User__c)</errorConditionFormula>
+    <errorDisplayField>wdn_User__c</errorDisplayField>
+    <errorMessage>User is required.</errorMessage>
+</ValidationRule>

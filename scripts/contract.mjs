@@ -40,6 +40,7 @@ export async function generateContract() {
       const relationshipName = metadata.relationshipName?.[0];
       const values = metadata.valueSet?.[0].valueSetDefinition?.[0].value;
       fields[field] = { type };
+      if (metadata.required?.[0] === 'true' || type === 'MasterDetail') fields[field].required = true;
       if (referenceTo) fields[field].referenceTo = referenceTo;
       if (relationshipName) fields[field].relationshipName = relationshipName;
       if (values) fields[field].values = values.map((value) => value.fullName[0]);

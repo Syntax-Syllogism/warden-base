@@ -3,6 +3,7 @@
     <description>Access target category recorded in the grant ledger.</description>
     <fullName>wdn_Type__c</fullName>
     <label>Type</label>
+    <required>true</required>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>

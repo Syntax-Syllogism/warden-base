@@ -38,4 +38,31 @@
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>false</editHeading>
+        <label>System Information</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>wdn_Type__c</fields>
+        <fields>wdn_Target_Label__c</fields>
+        <fields>wdn_Revoked_On__c</fields>
+        <fields>wdn_Granted_On__c</fields>
+        <relatedList>wdn_Provisioned_Grant__c.wdn_Persona_Assignment__c</relatedList>
+    </relatedLists>
 </Layout>

@@ -12,6 +12,7 @@ dist/
 dist-server/
 build/
 lib/
+!/scripts/org/lib/
 *.tsbuildinfo
 coverage/
 .nyc_output/

@@ -1,0 +1,122 @@
+[
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Persona__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Persona_Assignment__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Persona_Component__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Provisioned_Grant__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Reconciliation_Item__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "Analytics Cloud Integration User",
+    "object": "wdn_Reconciliation_Run__c",
+    "read": true,
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "viewAll": true,
+    "modifyAll": false
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Persona__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Persona_Assignment__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Persona_Component__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Provisioned_Grant__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Reconciliation_Item__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  },
+  {
+    "profile": "System Administrator",
+    "object": "wdn_Reconciliation_Run__c",
+    "read": true,
+    "create": true,
+    "edit": true,
+    "delete": true,
+    "viewAll": true,
+    "modifyAll": true
+  }
+]

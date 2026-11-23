@@ -1,0 +1,1301 @@
+[
+  {
+    "command": ["org", "create", "scratch"],
+    "status": 0,
+    "result": {
+      "username": "[REDACTED]",
+      "scratchOrgInfo": {
+        "attributes": {
+          "type": "ScratchOrgInfo",
+          "url": "/services/data/v68.0/sobjects/ScratchOrgInfo/2SRfj000005QbSTGA0"
+        },
+        "Id": "2SRfj000005QbSTGA0",
+        "OwnerId": "00561000000K5URAA0",
+        "IsDeleted": false,
+        "Name": "00000244",
+        "CreatedDate": "2026-11-23T07:35:27.000+0000",
+        "CreatedById": "00561000000K5URAA0",
+        "LastModifiedDate": "2026-11-23T07:35:39.000+0000",
+        "LastModifiedById": "00561000000zL78AAE",
+        "SystemModstamp": "2026-11-23T07:35:39.000+0000",
+        "LastViewedDate": "2026-11-23T07:35:27.000+0000",
+        "LastReferencedDate": "2026-11-23T07:35:27.000+0000",
+        "Edition": "Developer",
+        "Username": "[REDACTED]",
+        "AdminEmail": null,
+        "OrgName": "warden-base scratch",
+        "DurationDays": 1,
+        "ConnectedAppConsumerKey": "PlatformCLI",
+        "ConnectedAppCallbackUrl": "http://localhost:1717/OauthRedirect",
+        "Namespace": null,
+        "Features": "API",
+        "Snapshot": null,
+        "Country": null,
+        "Language": null,
+        "Package2AncestorIds": null,
+        "SourceOrg": null,
+        "HasSampleData": false,
+        "Release": "Current",
+        "SignupUsername": "[REDACTED]",
+        "Status": "Active",
+        "ErrorCode": null,
+        "ScratchOrg": "00DRK00000fpFIM",
+        "SignupInstance": "USA432S",
+        "SignupCountry": "US",
+        "SignupLanguage": "en_US",
+        "SignupEmail": "[REDACTED]",
+        "SignupTrialDays": 1,
+        "LoginUrl": "https://java-energy-97382-dev-ed.scratch.my.salesforce.com",
+        "Description": null,
+        "ExpirationDate": "2026-11-24",
+        "LastLoginDate": null,
+        "DeletedBy": null,
+        "DeletedDate": null
+      },
+      "authFields": {
+        "accessToken": "[REDACTED]",
+        "instanceUrl": "https://java-energy-97382-dev-ed.scratch.my.salesforce.com",
+        "orgId": "00DRK00000fpFIM2A2",
+        "username": "[REDACTED]",
+        "loginUrl": "https://java-energy-97382-dev-ed.scratch.my.salesforce.com",
+        "clientId": "PlatformCLI",
+        "isDevHub": false,
+        "instanceApiVersion": "68.0",
+        "instanceApiVersionLastRetrieved": "11/23/2026, 9:35:41 AM",
+        "name": "warden-base scratch",
+        "instanceName": "USA432S",
+        "namespacePrefix": null,
+        "isSandbox": false,
+        "isScratch": true,
+        "trailExpirationDate": "2026-11-25T07:35:38.000+0000",
+        "orgEdition": "Developer Edition",
+        "devHubUsername": "[REDACTED]",
+        "created": "1795419327000",
+        "expirationDate": "2026-11-24",
+        "createdOrgInstance": "USA432S",
+        "tracksSource": true
+      },
+      "warnings": [],
+      "orgId": "00DRK00000fpFIM2A2"
+    },
+    "warnings": [
+      "Record types defined in the scratch org definition file will stop being capitalized by default in a future release.\nSet the `org-capitalize-record-types` config var to `true` to enforce capitalization."
+    ]
+  },
+  {
+    "command": ["org", "display", "--target-org"],
+    "status": 0,
+    "result": {
+      "id": "00DRK00000fpFIM2A2",
+      "devHubId": "[REDACTED]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-energy-97382-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-11-24",
+      "createdBy": "[REDACTED]",
+      "edition": "Developer",
+      "orgName": "warden-base scratch",
+      "createdDate": "2026-11-23T07:35:27.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "warden-evidence-1795419317789"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Organization",
+            "url": "/services/data/v68.0/sobjects/Organization/00DRK00000fpFIM2A2"
+          },
+          "Id": "00DRK00000fpFIM2A2",
+          "OrganizationType": "Developer Edition"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "install", "--package"],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfRK000007P16X0AS"
+      },
+      "Id": "0HfRK000007P16X0AS",
+      "IsDeleted": false,
+      "CreatedDate": "2026-11-23T07:36:24.000+0000",
+      "CreatedById": "005RK00000kR6TTYA0",
+      "LastModifiedDate": "2026-11-23T07:36:24.000+0000",
+      "LastModifiedById": "005RK00000kR6TTYA0",
+      "SystemModstamp": "2026-11-23T07:36:24.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000n3O9AAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "SUCCESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100RK00000uSoeLYAS"
+          },
+          "Name": "Salesforce",
+          "TotalLicenses": 2,
+          "UsedLicenses": 1
+        },
+        {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100RK00000uSoeTYAS"
+          },
+          "Name": "Salesforce Platform",
+          "TotalLicenses": 3,
+          "UsedLicenses": 0
+        }
+      ],
+      "totalSize": 2,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00eRK00000Lxl5PYAR"
+          },
+          "Id": "00eRK00000Lxl5PYAR",
+          "UserLicense": {
+            "attributes": {
+              "type": "UserLicense",
+              "url": "/services/data/v68.0/sobjects/UserLicense/100RK00000uSoeTYAS"
+            },
+            "Name": "Salesforce Platform"
+          }
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "create", "user"],
+    "status": 0,
+    "result": {
+      "orgId": "00DRK00000fpFIM2A2",
+      "permissionSetAssignments": [],
+      "fields": {
+        "id": "005RK00000kRxMTYA0",
+        "username": "[REDACTED]",
+        "alias": "UUser",
+        "email": "[REDACTED]",
+        "emailencodingkey": "UTF-8",
+        "languagelocalekey": "en_US",
+        "localesidkey": "en_US",
+        "profileid": "00eRK00000Lxl5PYAR",
+        "lastname": "User",
+        "timezonesidkey": "America/Los_Angeles"
+      }
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "display", "--target-org"],
+    "status": 0,
+    "result": {
+      "id": "00DRK00000fpFIM2A2",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-energy-97382-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "connectedStatus": "Connected"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "installed", "list"],
+    "status": 0,
+    "result": [
+      {
+        "Id": "0A3RK000008aAkE0AU",
+        "SubscriberPackageId": "033fj000000tu81AAA",
+        "SubscriberPackageName": "warden-base",
+        "SubscriberPackageNamespace": null,
+        "SubscriberPackageVersionId": "04tfj000000n3O9AAI",
+        "SubscriberPackageVersionName": "ver 0.1.1",
+        "SubscriberPackageVersionNumber": "0.1.1.3",
+        "VersionSettings": ""
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "assign", "permset"],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "wdn_Integration"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSetAssignment",
+            "url": "/services/data/v68.0/sobjects/PermissionSetAssignment/0PaRK00000jSZtl0AG"
+          },
+          "Id": "0PaRK00000jSZtl0AG",
+          "PermissionSet": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSRK00000MliXC4AZ"
+            },
+            "Name": "wdn_Integration"
+          }
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     wdn_Reconciliation_Run__c run = new wdn_Reconciliation_Run__c(wdn_Mode__c='Apply', wdn_Source_System__c='CLI');\nExecute Anonymous:     Database.insert(run, true, AccessLevel.USER_MODE);\nExecute Anonymous:     wdn_Reconciliation_Item__c item = new wdn_Reconciliation_Item__c(wdn_Reconciliation_Run__c=run.Id, wdn_User_Key__c='ledger-guard', wdn_Status__c='Planned');\nExecute Anonymous:     Database.insert(item, true, AccessLevel.USER_MODE);\nExecute Anonymous:     wdn_Provisioned_Grant__c grant = new wdn_Provisioned_Grant__c(\nExecute Anonymous:       wdn_Target_Id__c='ledger-guard', wdn_Target_Label__c='Org evidence', wdn_Type__c='Permission Set',\nExecute Anonymous:       wdn_User__c='005RK00000kRxMTYA0', wdn_Granted_By_Run__c=run.Id, wdn_Granted_On__c=System.now(),\nExecute Anonymous:       wdn_Persona_Assignment__c=null,\nExecute Anonymous:       wdn_Persona__c=null);\nExecute Anonymous:     Database.insert(grant, true, AccessLevel.USER_MODE);\nExecute Anonymous:     System.debug('RUN=' + run.Id);\nExecute Anonymous:     System.debug('ITEM=' + item.Id);\nExecute Anonymous:     System.debug('GRANT=' + grant.Id);\nExecute Anonymous:   \n23:40:04.90 (90991812)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:40:04.90 (91018582)|EXECUTION_STARTED\n23:40:04.90 (91044103)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:40:04.90 (342692643)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:wdn_Provisioned_Grant:new\n23:40:04.90 (342744183)|CODE_UNIT_FINISHED|Validation:wdn_Provisioned_Grant:new\n23:40:04.90 (376833212)|USER_DEBUG|[12]|DEBUG|RUN=a05RK00000kRxhRYAS\n23:40:04.90 (376880383)|USER_DEBUG|[13]|DEBUG|ITEM=a04RK00000Icsg9YAB\n23:40:04.90 (376895793)|USER_DEBUG|[14]|DEBUG|GRANT=a03RK000026odRqYAI\n23:40:04.500 (500897698)|CUMULATIVE_LIMIT_USAGE\n23:40:04.500 (500897698)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:40:04.500 (500897698)|CUMULATIVE_LIMIT_USAGE_END\n\n23:40:04.90 (500964739)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:40:04.90 (500979839)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     \nExecute Anonymous:     Database.SaveResult result = Database.update(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI', wdn_Target_Label__c='Unexpected edit'), false, AccessLevel.USER_MODE);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     \nExecute Anonymous:   \n23:40:40.38 (38393142)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:40:40.38 (38409622)|EXECUTION_STARTED\n23:40:40.38 (38417982)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:40:40.38 (217102769)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:40:40.245 (245066345)|CUMULATIVE_LIMIT_USAGE\n23:40:40.245 (245066345)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:40:40.245 (245066345)|CUMULATIVE_LIMIT_USAGE_END\n\n23:40:40.38 (245326818)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:40:40.267 (267890179)|CUMULATIVE_LIMIT_USAGE\n23:40:40.267 (267890179)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:40:40.267 (267890179)|CUMULATIVE_LIMIT_USAGE_END\n\n23:40:40.38 (267930020)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:40:40.38 (267944140)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PSRK00000MlhPq4AJ",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "110RK00009NqD7NYAV",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "110RK00009NnUFAYA3",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "110RK00009NnqLOYAZ",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSat30AC",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     \nExecute Anonymous:     Database.DeleteResult result = Database.delete(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI'), false);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     \nExecute Anonymous:   \n23:42:54.26 (26693978)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:42:54.26 (26728029)|EXECUTION_STARTED\n23:42:54.26 (26755449)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:42:54.26 (49476043)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:42:54.57 (57270770)|CUMULATIVE_LIMIT_USAGE\n23:42:54.57 (57270770)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:42:54.57 (57270770)|CUMULATIVE_LIMIT_USAGE_END\n\n23:42:54.26 (57564714)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:42:54.68 (68648768)|CUMULATIVE_LIMIT_USAGE\n23:42:54.68 (68648768)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:42:54.68 (68648768)|CUMULATIVE_LIMIT_USAGE_END\n\n23:42:54.26 (68678498)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:42:54.26 (68690278)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSat30AC",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSRK00000MlhPq4AJ"
+          },
+          "Id": "0PSRK00000MlhPq4AJ"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSW9W0AW",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     Savepoint probe = Database.setSavepoint();\nExecute Anonymous:       wdn_Reconciliation_Run__c guardProbe = new wdn_Reconciliation_Run__c(wdn_Mode__c='Preview');\nExecute Anonymous:       Database.insert(guardProbe, true, AccessLevel.USER_MODE);\nExecute Anonymous:     Database.DeleteResult result = Database.delete(guardProbe, false);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     Database.rollback(probe);\nExecute Anonymous:   \n23:44:31.50 (50422191)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:44:31.50 (50471082)|EXECUTION_STARTED\n23:44:31.50 (50497092)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:44:31.50 (202863783)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBJ|wdn_ReconciliationRunTrigger on wdn_Reconciliation_Run trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationRunTrigger\n23:44:31.208 (208748492)|CUMULATIVE_LIMIT_USAGE\n23:44:31.208 (208748492)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 2 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:44:31.208 (208748492)|CUMULATIVE_LIMIT_USAGE_END\n\n23:44:31.50 (208969723)|CODE_UNIT_FINISHED|wdn_ReconciliationRunTrigger on wdn_Reconciliation_Run trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationRunTrigger\n23:44:31.216 (216678332)|CUMULATIVE_LIMIT_USAGE\n23:44:31.216 (216678332)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 4 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 2 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:44:31.216 (216678332)|CUMULATIVE_LIMIT_USAGE_END\n\n23:44:31.50 (216704943)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:44:31.50 (216715303)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSW9W0AW",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSRK00000MlhPq4AJ"
+          },
+          "Id": "0PSRK00000MlhPq4AJ"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "create", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSbnV0AS",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     \nExecute Anonymous:     Database.DeleteResult result = Database.delete(new wdn_Reconciliation_Item__c(Id='a04RK00000Icsg9YAB'), false);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     \nExecute Anonymous:   \n23:46:13.28 (28865025)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:46:13.28 (28891085)|EXECUTION_STARTED\n23:46:13.28 (28913415)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:46:13.28 (112413089)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBI|wdn_ReconciliationItemTrigger on wdn_Reconciliation_Item trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationItemTrigger\n23:46:13.117 (117436380)|CUMULATIVE_LIMIT_USAGE\n23:46:13.117 (117436380)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:46:13.117 (117436380)|CUMULATIVE_LIMIT_USAGE_END\n\n23:46:13.28 (117824740)|CODE_UNIT_FINISHED|wdn_ReconciliationItemTrigger on wdn_Reconciliation_Item trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationItemTrigger\n23:46:13.138 (138206633)|CUMULATIVE_LIMIT_USAGE\n23:46:13.138 (138206633)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:46:13.138 (138206633)|CUMULATIVE_LIMIT_USAGE_END\n\n23:46:13.28 (138258813)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:46:13.28 (138279253)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSbnV0AS",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     Database.update(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI', wdn_Revoked_On__c=System.now(), wdn_Revoked_By_Run__c='a05RK00000kRxhRYAS'), true, AccessLevel.USER_MODE);\nExecute Anonymous:     Database.update(new wdn_Reconciliation_Run__c(Id='a05RK00000kRxhRYAS', wdn_Applied_Count__c=1), true, AccessLevel.USER_MODE);\nExecute Anonymous:     Database.update(new wdn_Reconciliation_Item__c(Id='a04RK00000Icsg9YAB', wdn_Status__c='Applied'), true, AccessLevel.USER_MODE);\nExecute Anonymous:   \n23:46:37.38 (38473895)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:46:37.38 (38501876)|EXECUTION_STARTED\n23:46:37.38 (38523696)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:46:37.38 (61179973)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:46:37.72 (72825119)|CUMULATIVE_LIMIT_USAGE\n23:46:37.72 (72825119)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:46:37.72 (72825119)|CUMULATIVE_LIMIT_USAGE_END\n\n23:46:37.38 (72988570)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:46:37.38 (78622992)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:wdn_Provisioned_Grant:a03RK000026odRq\n23:46:37.38 (78660482)|CODE_UNIT_FINISHED|Validation:wdn_Provisioned_Grant:a03RK000026odRq\n23:46:37.193 (193364541)|CUMULATIVE_LIMIT_USAGE\n23:46:37.193 (193364541)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:46:37.193 (193364541)|CUMULATIVE_LIMIT_USAGE_END\n\n23:46:37.38 (193410062)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:46:37.38 (193435952)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     \nExecute Anonymous:     Database.SaveResult result = Database.update(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI', wdn_Revoked_On__c=System.now().addDays(1), wdn_Revoked_By_Run__c='a05RK00000kRxhRYAS'), false, AccessLevel.USER_MODE);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     \nExecute Anonymous:   \n23:47:15.30 (30206303)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:47:15.30 (30231173)|EXECUTION_STARTED\n23:47:15.30 (30254573)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:47:15.30 (51734918)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:47:15.55 (55465213)|CUMULATIVE_LIMIT_USAGE\n23:47:15.55 (55465213)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:47:15.55 (55465213)|CUMULATIVE_LIMIT_USAGE_END\n\n23:47:15.30 (55712723)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:47:15.70 (70296368)|CUMULATIVE_LIMIT_USAGE\n23:47:15.70 (70296368)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:47:15.70 (70296368)|CUMULATIVE_LIMIT_USAGE_END\n\n23:47:15.30 (70337308)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:47:15.30 (70356958)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     \nExecute Anonymous:     Database.SaveResult result = Database.update(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI', wdn_Revoked_On__c=null, wdn_Revoked_By_Run__c=null), false, AccessLevel.USER_MODE);\nExecute Anonymous:     System.assertEquals(false, result.isSuccess());\nExecute Anonymous:     System.assertEquals('Warden operational records can only be changed with the Ledger Maintenance permission.', result.getErrors()[0].getMessage());\nExecute Anonymous:     \nExecute Anonymous:   \n23:47:46.31 (31312145)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:47:46.31 (31334396)|EXECUTION_STARTED\n23:47:46.31 (31346996)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:47:46.31 (52228887)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:47:46.55 (55956461)|CUMULATIVE_LIMIT_USAGE\n23:47:46.55 (55956461)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:47:46.55 (55956461)|CUMULATIVE_LIMIT_USAGE_END\n\n23:47:46.31 (56169324)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeUpdate|__sfdc_trigger/wdn_LedgerGuard\n23:47:46.72 (72865664)|CUMULATIVE_LIMIT_USAGE\n23:47:46.72 (72865664)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:47:46.72 (72865664)|CUMULATIVE_LIMIT_USAGE_END\n\n23:47:46.31 (72901634)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:47:46.31 (72915604)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSZtl0AG",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "assign", "permset"],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "wdn_Ledger_Maintenance"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSetAssignment",
+            "url": "/services/data/v68.0/sobjects/PermissionSetAssignment/0PaRK00000jSbKw0AK"
+          },
+          "Id": "0PaRK00000jSbKw0AK",
+          "PermissionSet": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSRK00000MliXD4AZ"
+            },
+            "Name": "wdn_Ledger_Maintenance"
+          }
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "SetupEntityAccess",
+            "url": "/services/data/v68.0/sobjects/SetupEntityAccess/0J0RK0000MZcT1j0QF"
+          },
+          "Id": "0J0RK0000MZcT1j0QF"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     Database.delete(new wdn_Provisioned_Grant__c(Id='a03RK000026odRqYAI'), true, AccessLevel.USER_MODE);\nExecute Anonymous:     Database.delete(new wdn_Reconciliation_Run__c(Id='a05RK00000kRxhRYAS'), true, AccessLevel.USER_MODE);\nExecute Anonymous:   \n23:49:22.23 (23059920)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:49:22.23 (23081660)|EXECUTION_STARTED\n23:49:22.23 (23097160)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:49:22.23 (38469593)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:49:22.41 (41494056)|CUMULATIVE_LIMIT_USAGE\n23:49:22.41 (41494056)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:49:22.41 (41494056)|CUMULATIVE_LIMIT_USAGE_END\n\n23:49:22.23 (41710146)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:49:22.23 (661793427)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBJ|wdn_ReconciliationRunTrigger on wdn_Reconciliation_Run trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationRunTrigger\n23:49:22.662 (662191958)|CUMULATIVE_LIMIT_USAGE\n23:49:22.662 (662191958)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 2 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 2 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:49:22.662 (662191958)|CUMULATIVE_LIMIT_USAGE_END\n\n23:49:22.23 (662409298)|CODE_UNIT_FINISHED|wdn_ReconciliationRunTrigger on wdn_Reconciliation_Run trigger event BeforeDelete|__sfdc_trigger/wdn_ReconciliationRunTrigger\n23:49:22.795 (795239755)|CUMULATIVE_LIMIT_USAGE\n23:49:22.795 (795239755)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 2 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 2 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:49:22.795 (795239755)|CUMULATIVE_LIMIT_USAGE_END\n\n23:49:22.23 (795279365)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:49:22.23 (795299375)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSbKw0AK",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "assign", "permset"],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "wdn_Integration"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSetAssignment",
+            "url": "/services/data/v68.0/sobjects/PermissionSetAssignment/0PaRK00000jSLnp0AG"
+          },
+          "Id": "0PaRK00000jSLnp0AG",
+          "PermissionSet": {
+            "attributes": {
+              "type": "PermissionSet",
+              "url": "/services/data/v68.0/sobjects/PermissionSet/0PSRK00000MliXC4AZ"
+            },
+            "Name": "wdn_Integration"
+          }
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005RK00000kRxMTYA0"
+          },
+          "Id": "005RK00000kRxMTYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     wdn_Reconciliation_Run__c run = new wdn_Reconciliation_Run__c(wdn_Mode__c='Apply', wdn_Source_System__c='CLI');\nExecute Anonymous:     Database.insert(run, true, AccessLevel.USER_MODE);\nExecute Anonymous:     wdn_Reconciliation_Item__c item = new wdn_Reconciliation_Item__c(wdn_Reconciliation_Run__c=run.Id, wdn_User_Key__c='ledger-uninstall', wdn_Status__c='Planned');\nExecute Anonymous:     Database.insert(item, true, AccessLevel.USER_MODE);\nExecute Anonymous:     wdn_Provisioned_Grant__c grant = new wdn_Provisioned_Grant__c(\nExecute Anonymous:       wdn_Target_Id__c='ledger-uninstall', wdn_Target_Label__c='Org evidence', wdn_Type__c='Permission Set',\nExecute Anonymous:       wdn_User__c='005RK00000kRxMTYA0', wdn_Granted_By_Run__c=run.Id, wdn_Granted_On__c=System.now(),\nExecute Anonymous:       wdn_Persona_Assignment__c=null,\nExecute Anonymous:       wdn_Persona__c=null);\nExecute Anonymous:     Database.insert(grant, true, AccessLevel.USER_MODE);\nExecute Anonymous:     System.debug('RUN=' + run.Id);\nExecute Anonymous:     System.debug('ITEM=' + item.Id);\nExecute Anonymous:     System.debug('GRANT=' + grant.Id);\nExecute Anonymous:   \n23:51:43.37 (37721277)|USER_INFO|[EXTERNAL]|005RK00000kRxMT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:51:43.37 (37742458)|EXECUTION_STARTED\n23:51:43.37 (37747568)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:51:43.37 (111008081)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:wdn_Provisioned_Grant:new\n23:51:43.37 (111070722)|CODE_UNIT_FINISHED|Validation:wdn_Provisioned_Grant:new\n23:51:43.37 (127420060)|USER_DEBUG|[12]|DEBUG|RUN=a05RK00000kRvZKYA0\n23:51:43.37 (127478770)|USER_DEBUG|[13]|DEBUG|ITEM=a04RK00000IcvAzYAJ\n23:51:43.37 (127491110)|USER_DEBUG|[14]|DEBUG|GRANT=a03RK000026o0HBYAY\n23:51:43.159 (159740993)|CUMULATIVE_LIMIT_USAGE\n23:51:43.159 (159740993)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:51:43.159 (159740993)|CUMULATIVE_LIMIT_USAGE_END\n\n23:51:43.37 (159810534)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:51:43.37 (159839504)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "delete", "record"],
+    "status": 0,
+    "result": {
+      "id": "0PaRK00000jSLnp0AG",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["apex", "run", "--target-org"],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:       System.assert(FeatureManagement.checkPermission('wdn_Ledger_Maintenance'));\nExecute Anonymous:       Database.delete(new wdn_Provisioned_Grant__c(Id='a03RK000026o0HBYAY'), true, AccessLevel.USER_MODE);\nExecute Anonymous:     \n23:52:19.25 (25892083)|USER_INFO|[EXTERNAL]|005RK00000kR6TT|[REDACTED]|(GMT-08:00) Pacific Standard Time (America/Los_Angeles)|GMT-08:00\n23:52:19.25 (25909163)|EXECUTION_STARTED\n23:52:19.25 (25914353)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n23:52:19.25 (41247157)|CODE_UNIT_STARTED|[EXTERNAL]|01qRK00000LjqBG|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:52:19.43 (43186119)|CUMULATIVE_LIMIT_USAGE\n23:52:19.43 (43186119)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:52:19.43 (43186119)|CUMULATIVE_LIMIT_USAGE_END\n\n23:52:19.25 (43414400)|CODE_UNIT_FINISHED|wdn_LedgerGuard on wdn_Provisioned_Grant trigger event BeforeDelete|__sfdc_trigger/wdn_LedgerGuard\n23:52:19.290 (290595255)|CUMULATIVE_LIMIT_USAGE\n23:52:19.290 (290595255)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n23:52:19.290 (290595255)|CUMULATIVE_LIMIT_USAGE_END\n\n23:52:19.25 (290640855)|CODE_UNIT_FINISHED|execute_anonymous_apex\n23:52:19.25 (290655915)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "wdn_Reconciliation_Run__c",
+            "url": "/services/data/v68.0/sobjects/wdn_Reconciliation_Run__c/a05RK00000kRvZKYA0"
+          },
+          "Id": "a05RK00000kRvZKYA0"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "wdn_Reconciliation_Item__c",
+            "url": "/services/data/v68.0/sobjects/wdn_Reconciliation_Item__c/a04RK00000IcvAzYAJ"
+          },
+          "Id": "a04RK00000IcvAzYAJ"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "uninstall", "--package"],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "SubscriberPackageVersionUninstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/SubscriberPackageVersionUninstallRequest/06yRK000000MokXYAS"
+      },
+      "Id": "06yRK000000MokXYAS",
+      "IsDeleted": false,
+      "CreatedDate": "2026-11-23T07:53:11.000+0000",
+      "CreatedById": "005RK00000kR6TTYA0",
+      "LastModifiedDate": "2026-11-23T07:53:11.000+0000",
+      "LastModifiedById": "005RK00000kR6TTYA0",
+      "SystemModstamp": "2026-11-23T07:53:11.000+0000",
+      "SubscriberPackageVersionId": "04tfj000000n3O9AAI",
+      "Status": "Success"
+    },
+    "warnings": []
+  },
+  {
+    "command": ["package", "installed", "list"],
+    "status": 0,
+    "result": [],
+    "warnings": []
+  },
+  {
+    "command": ["data", "query", "--target-org"],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": ["org", "delete", "scratch"],
+    "status": 0,
+    "result": {
+      "username": "[REDACTED]",
+      "orgId": "00DRK00000fpFIM2A2"
+    },
+    "warnings": []
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "scenario": "install-upgrade",
+  "startedAt": "2026-11-23T07:35:17.612Z",
+  "finishedAt": "2026-11-23T07:57:25.090Z",
+  "commit": "ae7f2f6d2407eb216094f5ee6ca620eeb985fe23",
+  "dirty": false,
+  "packageVersion": "04tfj000000n3O9AAI",
+  "securityType": "AdminsOnly",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://enterprise-platform-6874-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true
+  },
+  "identities": [
+    {
+      "key": "base-integration",
+      "profile": "Standard Platform User",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    },
+    {
+      "key": "base-publisher",
+      "profile": "Standard Platform User",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Installed warden-base version is 04tfj000000mt2DAAQ",
+      "outcome": "passed",
+      "detail": "0.1.0.2 (04tfj000000mt2DAAQ)"
+    },
+    {
+      "name": "smoke-before: publisher upserted persona and inserted two components",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-before: publisher denied Grant create access",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-before: integration inserted Run, Item and Grant and revoked the assignment",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-before: integration Run delete blocked by ledger guard",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Installed warden-base version is 04tfj000000n3O9AAI",
+      "outcome": "passed",
+      "detail": "0.1.1.3 (04tfj000000n3O9AAI)"
+    },
+    {
+      "name": "wdn_Persona_Assignment__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "1 before, 0 missing"
+    },
+    {
+      "name": "wdn_Persona_Component__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "2 before, 0 missing"
+    },
+    {
+      "name": "wdn_Persona__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "1 before, 0 missing"
+    },
+    {
+      "name": "wdn_Provisioned_Grant__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "1 before, 0 missing"
+    },
+    {
+      "name": "wdn_Reconciliation_Item__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "1 before, 0 missing"
+    },
+    {
+      "name": "wdn_Reconciliation_Run__c records survived the upgrade",
+      "outcome": "passed",
+      "detail": "1 before, 0 missing"
+    },
+    {
+      "name": "Subscriber schema matches contract.json",
+      "outcome": "passed",
+      "detail": "0 differences"
+    },
+    {
+      "name": "Upgraded guard blocks edits to the existing Grant",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "smoke-after: publisher upserted persona and inserted two components",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-after: publisher denied Grant create access",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-after: integration inserted Run, Item and Grant and revoked the assignment",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke-after: integration Run delete blocked by ledger guard",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    }
+  ],
+  "metrics": {
+    "upgradeFrom": "04tfj000000mt2DAAQ",
+    "userLicenses": [
+      {
+        "Name": "Salesforce",
+        "TotalLicenses": 2,
+        "UsedLicenses": 1
+      },
+      {
+        "Name": "Salesforce Platform",
+        "TotalLicenses": 3,
+        "UsedLicenses": 0
+      }
+    ],
+    "publisherIdentity": "base-publisher"
+  }
+}

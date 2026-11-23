@@ -3,6 +3,7 @@
     <description>Access target category; Persona is reserved for future nested personas.</description>
     <fullName>wdn_Type__c</fullName>
     <label>Type</label>
+    <required>true</required>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>

@@ -7,9 +7,10 @@
   "commit": "15d01e38b55e216c9a3dd24ce93ddc7e2a146cdb",
   "tag": "15d01e38b55e216c9a3dd24ce93ddc7e2a146cdb",
   "createdAt": "2026-11-22T17:20:50.014Z",
-  "released": false,
+  "released": true,
   "codeCoverage": 100,
   "hasPassedCodeCoverageCheck": true,
   "validationSkipped": false,
-  "installUrl": "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000mt2DAAQ"
+  "installUrl": "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000mt2DAAQ",
+  "promotedAt": "2026-11-22"
 }

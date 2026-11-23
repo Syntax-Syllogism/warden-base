@@ -31,7 +31,13 @@ public class wdn_TriggerTestUsers {
       Alias = alias,
       LastName = alias,
       Email = alias + '@example.test',
-      Username = alias + '.' + System.now().getTime() + '@example.test',
+      Username =
+        alias
+        + '.'
+        + System.now().getTime()
+        + '.'
+        + Crypto.getRandomInteger()
+        + '@example.test',
       ProfileId = profiles[0].Id,
       TimeZoneSidKey = 'America/New_York',
       LocaleSidKey = 'en_US',

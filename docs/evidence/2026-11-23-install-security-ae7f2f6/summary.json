@@ -1,0 +1,38 @@
+{
+  "scenario": "install-security",
+  "startedAt": "2026-11-23T07:54:35.202Z",
+  "finishedAt": "2026-11-23T07:57:11.384Z",
+  "commit": "ae7f2f6d2407eb216094f5ee6ca620eeb985fe23",
+  "dirty": true,
+  "packageVersion": "04tfj000000n3O9AAI",
+  "securityType": "AdminsOnly",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://inspiration-site-5647-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Installed warden-base version is 04tfj000000n3O9AAI",
+      "outcome": "passed",
+      "detail": "0.1.1.3 (04tfj000000n3O9AAI)"
+    },
+    {
+      "name": "Scratch org profile inventory is available",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "AdminsOnly Ledger Maintenance profile grants match",
+      "outcome": "passed",
+      "detail": "{\"missing\":[],\"unexpected\":[]}"
+    }
+  ],
+  "metrics": {
+    "profiles": 38,
+    "profilesWithLedgerMaintenance": 1
+  }
+}

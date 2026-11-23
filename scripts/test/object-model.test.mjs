@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import test from 'node:test';
 import { generateContract, metadataRoot, objectRoot, permissionRoot, readMetadata } from '../contract.mjs';
@@ -13,6 +13,34 @@ const expectedFields = {
   wdn_Reconciliation_Run__c:
     'Mode Scope Planned_Count Applied_Count Error_Count Unmanaged_Count Source_System Cli_Version Invoking_User Ci_Job Definition_Path Definition_Sha',
   wdn_Reconciliation_Item__c: 'Reconciliation_Run User_Key User_Id Category Action Status Detail Error',
+};
+
+const expectedRelatedLists = {
+  wdn_Persona__c: [
+    'wdn_Persona_Component__c.wdn_Persona__c',
+    'wdn_Persona_Assignment__c.wdn_Persona__c',
+    'wdn_Provisioned_Grant__c.wdn_Persona__c',
+  ],
+  wdn_Persona_Assignment__c: ['wdn_Provisioned_Grant__c.wdn_Persona_Assignment__c'],
+  wdn_Provisioned_Grant__c: ['RelatedEntityHistoryList'],
+  wdn_Reconciliation_Run__c: [
+    'wdn_Reconciliation_Item__c.wdn_Reconciliation_Run__c',
+    'wdn_Provisioned_Grant__c.wdn_Granted_By_Run__c',
+    'wdn_Provisioned_Grant__c.wdn_Revoked_By_Run__c',
+    'wdn_Persona_Assignment__c.wdn_Revoked_By_Run__c',
+  ],
+};
+
+const validationRequiredFields = async (object) => {
+  const directory = join(objectRoot, object, 'validationRules');
+  if (!existsSync(directory)) return [];
+  const fields = [];
+  for (const file of readdirSync(directory).filter((name) => name.endsWith('.validationRule-meta.xml'))) {
+    const rule = await readMetadata(join(directory, file), 'ValidationRule');
+    const match = rule.errorConditionFormula[0].trim().match(/^ISBLANK\((\w+)\)$/);
+    if (rule.active[0] === 'true' && match) fields.push(match[1]);
+  }
+  return fields;
 };
 
 test('the checked-in contract describes the six base objects and their fields', async () => {
@@ -98,9 +126,106 @@ test('the four permission sets grant valid fields and the expected object access
     for (const fieldPermission of permission.fieldPermissions ?? []) {
       const [object, field] = fieldPermission.field[0].split('.');
       assert(Object.hasOwn(objects[object]?.fields ?? {}, field), `${name}: ${object}.${field}`);
+      // Salesforce forbids field permissions on required and master-detail fields.
+      assert(!objects[object].fields[field].required, `${name}: ${object}.${field} is required`);
       assert(access[object]?.includes('R'));
       if (fieldPermission.editable[0] === 'true') assert(access[object].includes('E'));
     }
+  }
+});
+
+test('base layouts show all fields, system information and the expected related lists with unique titles', async () => {
+  const layouts = join(metadataRoot, 'ui/layouts');
+  const files = readdirSync(layouts).filter((name) => name.endsWith('.layout-meta.xml'));
+  assert.deepEqual(files.map((file) => file.split('-')[0]).sort(), Object.keys(expectedFields).sort());
+
+  const ledgerObjects = new Set([
+    'wdn_Provisioned_Grant__c',
+    'wdn_Reconciliation_Run__c',
+    'wdn_Reconciliation_Item__c',
+  ]);
+  for (const file of files) {
+    const layout = await readMetadata(join(layouts, file), 'Layout');
+    const [object] = file.split('-');
+    const items = layout.layoutSections.flatMap((section) =>
+      section.layoutColumns.flatMap((column) => column.layoutItems ?? []),
+    );
+    const fields = join(objectRoot, object, 'fields');
+    const required = new Set();
+    for (const fieldFile of readdirSync(fields).filter((name) => name.endsWith('.field-meta.xml'))) {
+      const metadata = await readMetadata(join(fields, fieldFile), 'CustomField');
+      const [field] = metadata.fullName;
+      assert(
+        items.some((item) => item.field?.[0] === field),
+        `${file} is missing ${field}`,
+      );
+      if (metadata.required?.[0] === 'true' || metadata.type[0] === 'MasterDetail') required.add(field);
+    }
+    // A lookup to User can't be required in package metadata, so an ISBLANK validation rule enforces it.
+    for (const field of await validationRequiredFields(object)) required.add(field);
+
+    const system = layout.layoutSections.find((section) => section.label?.[0] === 'System Information');
+    assert(system, `${file} is missing System Information`);
+    assert.equal(system.detailHeading?.[0], 'true', file);
+    assert.equal(system.editHeading?.[0], 'false', file);
+    const auditFields = system.layoutColumns.flatMap((column) => column.layoutItems ?? []);
+    for (const field of ['CreatedById', 'LastModifiedById']) {
+      assert.equal(
+        auditFields.find((item) => item.field?.[0] === field)?.behavior?.[0],
+        'Readonly',
+        `${file}: ${field}`,
+      );
+    }
+
+    const relatedLists = new Map((layout.relatedLists ?? []).map((list) => [list.relatedList[0], list]));
+    for (const name of expectedRelatedLists[object] ?? []) {
+      assert(relatedLists.has(name), `${file} is missing ${name}`);
+      if (name !== 'RelatedEntityHistoryList') {
+        assert.equal(relatedLists.get(name).fields?.[0], 'NAME', `${file}: ${name} should start with NAME`);
+      }
+    }
+
+    const relatedListTitles = new Map();
+    for (const list of layout.relatedLists ?? []) {
+      const [name] = list.relatedList;
+      const [childObject, field] = name.split('.');
+      if (!field) continue; // Standard lists such as field history have no relationship field.
+
+      const fieldPath = join(objectRoot, childObject, 'fields', field + '.field-meta.xml');
+      const metadata = await readMetadata(fieldPath, 'CustomField');
+      const title = metadata.relationshipLabel?.[0];
+      assert(title, `${file}: ${name} is missing a relationship label`);
+      assert(!relatedListTitles.has(title), `${file}: ${relatedListTitles.get(title)} and ${name} both use "${title}"`);
+      relatedListTitles.set(title, name);
+    }
+
+    for (const item of items) {
+      const field = item.field?.[0];
+      const behavior = item.behavior?.[0];
+      if (ledgerObjects.has(object) && field) {
+        assert.equal(behavior, required.has(field) ? 'Required' : 'Readonly', `${file}: ${field}`);
+      }
+      if (behavior === 'Required' && field !== 'Name') {
+        assert(required.has(field), `${file}: ${field} is Required on the layout but optional in metadata`);
+      }
+    }
+    if (ledgerObjects.has(object)) {
+      assert.equal(layout.excludeButtons, undefined, `${file} should keep its standard buttons`);
+    }
+  }
+});
+
+test('all Apex metadata uses the project API version', async () => {
+  const { sourceApiVersion } = JSON.parse(readFileSync(new URL('../../sfdx-project.json', import.meta.url), 'utf8'));
+  const base = join(metadataRoot, '..');
+  for (const entry of readdirSync(base, { recursive: true, withFileTypes: true })) {
+    const match = entry.name.match(/\.(cls|trigger)-meta\.xml$/);
+    if (!entry.isFile() || !match) continue;
+    const metadata = await readMetadata(
+      join(entry.parentPath, entry.name),
+      match[1] === 'cls' ? 'ApexClass' : 'ApexTrigger',
+    );
+    assert.equal(metadata.apiVersion[0], sourceApiVersion, entry.name);
   }
 });
 
@@ -115,4 +240,24 @@ test('new grant Persona lookup restricts deletion and stays inside the history t
     readdirSync(join(grant, 'fields')).map((file) => readMetadata(join(grant, 'fields', file), 'CustomField')),
   );
   assert(tracked.filter((field) => field.trackHistory?.[0] === 'true').length <= 20);
+});
+
+test('lookups to User never use Restrict or Cascade, which packaging rejects', async () => {
+  for (const entry of readdirSync(objectRoot, { recursive: true, withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith('.field-meta.xml')) continue;
+    const field = await readMetadata(join(entry.parentPath, entry.name), 'CustomField');
+    if (field.type?.[0] !== 'Lookup' || field.referenceTo?.[0] !== 'User') continue;
+    assert(
+      !['Restrict', 'Cascade'].includes(field.deleteConstraint?.[0]),
+      `${entry.name}: a User lookup cannot use ${field.deleteConstraint?.[0]}`,
+    );
+  }
+});
+
+test('the User lookups stay optional in metadata and an active validation rule requires them', async () => {
+  for (const object of ['wdn_Persona_Assignment__c', 'wdn_Provisioned_Grant__c']) {
+    const field = await readMetadata(join(objectRoot, object, 'fields/wdn_User__c.field-meta.xml'), 'CustomField');
+    assert.equal(field.required[0], 'false', object);
+    assert.deepEqual(await validationRequiredFields(object), ['wdn_User__c'], object);
+  }
 });

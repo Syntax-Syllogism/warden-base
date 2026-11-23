@@ -31,11 +31,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>wdn_Persona_Component__c.wdn_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>wdn_Persona__c.wdn_Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -72,11 +67,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>wdn_Provisioned_Grant__c.wdn_Target_Label__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>wdn_Provisioned_Grant__c.wdn_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -1,9 +1,11 @@
 {
   "name": "warden-base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "prepare": "husky",
-    "test": "npm run format:check && npm run lint:md && npm run test:metadata && npm run test:analyzer && npm run contract:check",
+    "test": "npm run format:check && npm run lint:md && npm run test:metadata && npm run test:analyzer && npm run contract:check && npm run test:org",
+    "org:evidence": "node scripts/org/harness.mjs",
+    "test:org": "node --test scripts/org/test/*.test.mjs",
     "format:check": "prettier --check .",
     "format:apex": "afmt -c .afmt.toml --write .",
     "format:apex:check": "afmt -c .afmt.toml --check .",

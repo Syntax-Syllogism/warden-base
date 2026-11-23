@@ -11,35 +11,115 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Mode__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Scope__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Source_System__c</field>
-            </layoutItems>
-            <layoutItems>
-                <field>wdn_Cli_Version__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Planned_Count__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Applied_Count__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Error_Count__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>wdn_Unmanaged_Count__c</field>
-            </layoutItems>
-            <layoutItems>
-                <field>wdn_Invoking_User__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Provenance</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>wdn_Invoking_User__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>wdn_Cli_Version__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>wdn_Ci_Job__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>wdn_Definition_Path__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>wdn_Definition_Sha__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>false</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>false</editHeading>
+        <label>System Information</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>wdn_User_Key__c</fields>
+        <fields>wdn_Action__c</fields>
+        <fields>wdn_Status__c</fields>
+        <fields>wdn_Category__c</fields>
+        <relatedList>wdn_Reconciliation_Item__c.wdn_Reconciliation_Run__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>wdn_User__c</fields>
+        <fields>wdn_Type__c</fields>
+        <fields>wdn_Target_Label__c</fields>
+        <relatedList>wdn_Provisioned_Grant__c.wdn_Granted_By_Run__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>wdn_User__c</fields>
+        <fields>wdn_Type__c</fields>
+        <fields>wdn_Target_Label__c</fields>
+        <relatedList>wdn_Provisioned_Grant__c.wdn_Revoked_By_Run__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>wdn_User__c</fields>
+        <fields>wdn_Persona__c</fields>
+        <fields>wdn_Revoked_On__c</fields>
+        <relatedList>wdn_Persona_Assignment__c.wdn_Revoked_By_Run__c</relatedList>
+    </relatedLists>
 </Layout>

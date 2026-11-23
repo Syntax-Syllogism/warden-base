@@ -1,5 +1,6 @@
 engines:
   eslint:
+    # Apply Node globals and the Node-specific LWC rule overrides to scripts.
     eslint_config_file: config/code-analyzer-eslint.config.mjs
   cpd:
     file_extensions:

@@ -1,8 +1,8 @@
 {
   "packageDirectories": [
     {
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionName": "ver 0.1.1",
+      "versionNumber": "0.1.1.NEXT",
       "path": "sfdx-source/base",
       "default": true,
       "package": "warden-base",
@@ -17,6 +17,8 @@
   "packageAliases": {
     "warden-base": "0Hofj0000005mLlCAI",
     "warden-base@0.1.0-1": "04tfj000000mpEjAAI",
-    "warden-base@0.1.0-2": "04tfj000000mt2DAAQ"
+    "warden-base@0.1.0-2": "04tfj000000mt2DAAQ",
+    "warden-base@0.1.1-2": "04tfj000000n2S5AAI",
+    "warden-base@0.1.1-3": "04tfj000000n3O9AAI"
   }
 }
