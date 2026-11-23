@@ -1,0 +1,25 @@
+{
+  "outcome": "uninstalled",
+  "result": {
+    "attributes": {
+      "type": "SubscriberPackageVersionUninstallRequest",
+      "url": "/services/data/v68.0/tooling/sobjects/SubscriberPackageVersionUninstallRequest/06yhP0000004rovQAA"
+    },
+    "Id": "06yhP0000004rovQAA",
+    "IsDeleted": false,
+    "CreatedDate": "2026-11-23T07:09:46.000+0000",
+    "CreatedById": "005hP000005rbWPQAY",
+    "LastModifiedDate": "2026-11-23T07:09:46.000+0000",
+    "LastModifiedById": "005hP000005rbWPQAY",
+    "SystemModstamp": "2026-11-23T07:09:46.000+0000",
+    "SubscriberPackageVersionId": "04tfj000000n2S5AAI",
+    "Status": "Success"
+  },
+  "records": {
+    "runId": "a05hP000005s50QQAQ",
+    "itemId": "a04hP000001C87hQAC",
+    "grantId": "a03hP000009oV6jQAE"
+  },
+  "installed": null,
+  "objects": []
+}

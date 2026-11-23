@@ -1,0 +1,111 @@
+{
+  "scenario": "ledger-lifecycle",
+  "startedAt": "2026-11-23T06:52:44.526Z",
+  "finishedAt": "2026-11-23T07:10:40.166Z",
+  "commit": "93d0659230d887d01c4df3754d8e52130d7151ff",
+  "dirty": false,
+  "packageVersion": "04tfj000000n2S5AAI",
+  "securityType": "AdminsOnly",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://nosoftware-power-3872-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true
+  },
+  "identities": [
+    {
+      "key": "base-integration",
+      "profile": "Standard Platform User",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Installed warden-base version is 04tfj000000n2S5AAI",
+      "outcome": "passed",
+      "detail": "0.1.1.2 (04tfj000000n2S5AAI)"
+    },
+    {
+      "name": "Ordinary Grant edit blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Grant delete blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Run delete blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Item delete blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "First two-field revocation stamp accepted",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Run and Item field updates accepted",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Second revocation stamp blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Clearing the revocation stamp blocked",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Non-admin Ledger Maintenance user purged Grant and Run",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Run purge cascaded to its master-detail Item",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "AdminsOnly System Administrator bypasses the ledger guard",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Run and Item remain before uninstall",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Uninstall removed the package and its populated Run object",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "userLicenses": [
+      {
+        "Name": "Salesforce",
+        "TotalLicenses": 2,
+        "UsedLicenses": 1
+      },
+      {
+        "Name": "Salesforce Platform",
+        "TotalLicenses": 3,
+        "UsedLicenses": 0
+      }
+    ],
+    "publisherIdentity": null
+  }
+}

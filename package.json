@@ -1,6 +1,6 @@
 {
   "name": "warden-base",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "prepare": "husky",
     "test": "npm run format:check && npm run lint:md && npm run test:metadata && npm run test:analyzer && npm run contract:check && npm run test:org",
@@ -23,10 +23,13 @@
     "@commitlint/config-conventional": "^20.5.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "markdownlint-cli2": "^0.23.3",
+    "markdownlint-cli2": "^0.24.2",
     "prettier": "^3.9.9",
     "xml2js": "^0.6.2"
   },
   "private": true,
-  "description": "Ledger and persona schema for the warden CLI's Salesforce org writes (unlocked 2GP)"
+  "description": "Ledger and persona schema for the warden CLI's Salesforce org writes (unlocked 2GP)",
+  "overrides": {
+    "katex": "^0.18.2"
+  }
 }

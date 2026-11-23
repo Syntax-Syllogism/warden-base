@@ -1,0 +1,87 @@
+{
+  "scenario": "install-smoke",
+  "startedAt": "2026-11-23T07:15:27.779Z",
+  "finishedAt": "2026-11-23T07:24:20.686Z",
+  "commit": "93d0659230d887d01c4df3754d8e52130d7151ff",
+  "dirty": true,
+  "packageVersion": "04tfj000000n2S5AAI",
+  "securityType": "AdminsOnly",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://page-power-4540-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true
+  },
+  "identities": [
+    {
+      "key": "base-integration",
+      "profile": "Standard Platform User",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    },
+    {
+      "key": "base-publisher",
+      "profile": "Standard Platform User",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Installed warden-base version is 04tfj000000n2S5AAI",
+      "outcome": "passed",
+      "detail": "0.1.1.2 (04tfj000000n2S5AAI)"
+    },
+    {
+      "name": "All four packaged permission sets exist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Ledger Maintenance custom permission exists",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke: publisher upserted persona and inserted two components",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke: publisher denied Grant create access",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke: integration inserted Run, Item and Grant and revoked the assignment",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "smoke: integration Run delete blocked by ledger guard",
+      "outcome": "passed",
+      "detail": "Warden operational records can only be changed with the Ledger Maintenance permission."
+    },
+    {
+      "name": "Subscriber schema matches contract.json",
+      "outcome": "passed",
+      "detail": "0 differences"
+    }
+  ],
+  "metrics": {
+    "userLicenses": [
+      {
+        "Name": "Salesforce",
+        "TotalLicenses": 2,
+        "UsedLicenses": 1
+      },
+      {
+        "Name": "Salesforce Platform",
+        "TotalLicenses": 3,
+        "UsedLicenses": 2
+      }
+    ],
+    "publisherIdentity": "base-publisher"
+  }
+}

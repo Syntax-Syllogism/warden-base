@@ -1,0 +1,38 @@
+{
+  "scenario": "install-security",
+  "startedAt": "2026-11-23T07:24:52.125Z",
+  "finishedAt": "2026-11-23T07:27:10.520Z",
+  "commit": "9b388acad705eda554d1b335dcc2fff0714932f3",
+  "dirty": true,
+  "packageVersion": "04tfj000000n2S5AAI",
+  "securityType": "AdminsOnly",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://power-connect-3848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Installed warden-base version is 04tfj000000n2S5AAI",
+      "outcome": "passed",
+      "detail": "0.1.1.2 (04tfj000000n2S5AAI)"
+    },
+    {
+      "name": "Scratch org profile inventory is available",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "AdminsOnly Ledger Maintenance profile grants match",
+      "outcome": "passed",
+      "detail": "{\"missing\":[],\"unexpected\":[]}"
+    }
+  ],
+  "metrics": {
+    "profiles": 38,
+    "profilesWithLedgerMaintenance": 1
+  }
+}

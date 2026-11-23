@@ -1,0 +1,12 @@
+[
+  {
+    "profile": "System Administrator",
+    "permissionSet": null,
+    "ownedByProfile": true
+  },
+  {
+    "profile": null,
+    "permissionSet": "wdn_Ledger_Maintenance",
+    "ownedByProfile": false
+  }
+]

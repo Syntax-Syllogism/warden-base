@@ -34,7 +34,7 @@ Build `04tfj000000n3O9AAI` from commit `d638260`. The evidence folders carry
 | [Install security](scenarios.md#install-security) | Profile grants and object access    | `AllUsers`, fresh org                      | Not run. The release plan covered three scratch orgs.                 |
 
 Install smoke ran on the org that the upgrade kept. On that same org, the
-extension source (warden-extension `88dff6e`) was deployed and RunLocalTests ran
+source of a dependent extension package (commit `88dff6e`) was deployed and RunLocalTests ran
 155 tests: 132 extension and 23 base. All passed once the org had the
 extension's Communities settings (`enableNetworksEnabled`,
 `enableOotbProfExtUserOpsEnable`). Without them, two `wdn_SiteAccessTest`
@@ -44,7 +44,11 @@ scenario, so it has no evidence folder.
 The 0.1.1.2 beta (`04tfj000000n2S5AAI`) passed the same base scenarios but
 failed that extension check. Its component lock test counted queries that the
 extension's component trigger adds. 0.1.1.3 fixes the test (#23). 0.1.1.2 won't
-be promoted.
+be promoted. Its passing scenario runs:
+[install-security](2026-11-23-install-security-9b388ac/summary.md),
+[install-smoke](2026-11-23-install-smoke-93d0659/summary.md),
+[install-upgrade](2026-11-23-install-upgrade-93d0659/summary.md) and
+[ledger-lifecycle](2026-11-23-ledger-lifecycle-93d0659/summary.md).
 
 ### 0.1.0.2
 
