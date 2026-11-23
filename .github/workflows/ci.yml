@@ -33,7 +33,7 @@ jobs:
       - run: node scripts/gate.mjs --skip-apex
 
       - name: Apex tests (AER)
-        uses: octoberswimmer/aer-dist@2947631f729f460303c9f1f560d00623fd9e2234 # v1.4.44
+        uses: octoberswimmer/aer-dist@9d686186f5983d6984212177c936e0aa574ad7d2 # v1.6.20
         with:
           source: sfdx-source/base
           version: v1.4.44
